@@ -1,0 +1,41 @@
+---
+title: "`lingphonology`: automatic phonological description"
+author: "Moroz"
+date: '20/12/2017'
+output: html_document
+---
+
+## What for?
+Phonological description of the language is not formalised. There are a lot of events that are ommited during the standard phonological description:
+
+* phonology of borrowings;
+* phonology of ideophones.
+
+More or less all phonological description (namely consonant and vowel inventories, syllable structure) are based on some word list. But the inventory based on 1000 word list is less representative then e. g. 10000 word list. It is more likely that in 1000 word list some rare segments of the language won't appear at all. So all phonological descriptions need to have such a measure of the phonological representativity.
+
+Second, having such a list it is possible automatically create phonological descriptions of language using transcription to IPA correspondenses. Without such an algorithm, reasearchers need to do it bu themselfs, so it is more likely that mistakes will appear. Having corpora or word list it is possible automate the phonological description of language under investigation.
+
+So `lingphonology` is planed to be an R package that automatically creates phonological description using text corpora or word list and correspondences for transcription used in the source to IPA symbols. It is also possible to start a work, investigating representetivity of different word lists and corpora, that later will provide us a measure of our belief in phonological description.
+
+## Structure of the package
+User provides
+
+* word list or corpus
+* list of IPA - transcription correspondences
+
+For correspondences omography is checked. Word lists are checked for repeated entries.
+
+Word list or corpus is tidyfied to table where each row contain one segment and word that it contains (and the corpus sentence identifier).
+
+Then package automatically generates:
+
+* consonant chart, vowel chart and all segment frequencies
+* syllable structure stratagies (with different generalisations based on phonological features) and its frequencies
+
+Output formats:
+
+* .html,
+* .docx,
+* variables in R
+
+Problems: suprasegmental features.
