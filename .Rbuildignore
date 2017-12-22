@@ -1,0 +1,13 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^codecov\.yml$
+^\.travis\.yml$
+^rsconnect
+^appveyor\.yml$
+^database_creation$
+^docs$
+^\.Rprofile$
+^README.md
+^CONTRIBUTING.md
+^ISSUE_TEMPLATE.md
+^LICENSE
