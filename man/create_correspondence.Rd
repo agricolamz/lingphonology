@@ -4,10 +4,12 @@
 \alias{create_correspondence}
 \title{Create IPA-transcription correspondence}
 \usage{
-create_correspondence(ipa = "", correspondence = "")
+create_correspondence(correspondence, ipa)
 }
 \arguments{
 \item{correspondence}{a character vector, containing symbol correspondences to IPA symbols in orthographical system of user's files}
+
+\item{ipa}{a character vector, containing symbol correspondences to IPA symbols in orthographical system of user's files}
 }
 \description{
 This function returns a dataframe with IPA id, IPA symbol and transcription. If user doesn't provide any data, the function returns a template that is used in lingphonology, so users can save it to the disc and open it with appropriate software.
