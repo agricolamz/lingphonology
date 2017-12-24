@@ -4,28 +4,12 @@
 #' @param correspondence a character vector, containing symbol correspondences to IPA symbols in orthographical system of user's files
 #' @author George Moroz <agricolamz@gmail.com>
 #' @examples
-#' create_correspondence()
+#' create_correspondence(c("pʰ", "tʰ", "kʰ"), c("p", "t", "k"))
 #' @export
 
-create_correspondence <- function(correspondence = "") {
+create_correspondence <- function(ipa = "", correspondence = "") {
   # change correspondence to string -----------------------------------------
   correspondence <- as.character(correspondence)
-
-  # list of IPA symbols; new symbols should be added to the end! --------------
-  ipa <- c("i", "y", "ɨ", "ʉ", "ɯ", "u", "ɪ", "ʏ", "ʊ",
-           "ɪ̈",
-           "ʊ̈",
-           "e", "ø", "ɘ", "ɵ", "ɤ", "o",
-           "e̞",
-           "ø̞",
-           "ə",
-           "ɵ̞",
-           "ɤ̞",
-           "o̞",
-           "ɛ", "œ", "ɜ", "ɞ", "ʌ", "ɔ", "æ", "ɐ", "a", "ɶ", "a",
-           "ä",
-           "ɒ̈",
-           "ɑ", "ɒ")
 
   # create a dataframe with IPA (and/for user's values) ---------------------
   correspondence_df <- data.frame(
