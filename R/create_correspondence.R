@@ -62,6 +62,26 @@ create_correspondence <- function(correspondence, ipa) {
     )
   }
 
+  # not in phoible
+  if (length(not_in_phoible) > 0) {
+    warning(
+      paste0(
+        "Symbols ",
+        if (crayon_installed == TRUE) {
+          crayon::cyan(crayon::bold(
+            paste(not_in_phoible, collapse = ", ")))
+        } else{
+          paste(not_in_phoible, collapse = ", ")
+        },
+        " are absent in our version of the IPA.",
+        " Check correspondences: ",
+        paste(which(ipa %in% not_in_phoible), collapse = ", "),
+        "."
+      ),
+      call. = FALSE
+    )
+  }
+
   # check transcription provided by user ------------------------------------
   if(FALSE %in% (duplicated(corresp_df) == duplicated(correspondence))){
     duplicated_cor <-
