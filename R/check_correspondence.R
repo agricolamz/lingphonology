@@ -1,14 +1,14 @@
-#' Create IPA-transcription correspondence
+#' Check IPA-transcription correspondence
 #'
-#' This function returns a dataframe with IPA id, IPA symbol and transcription. If user doesn't provide any data, the function returns a template that is used in lingphonology, so users can save it to the disc and open it with appropriate software.
+#' This function returns a dataframe with transcription and IPA symbols, simultaneously checking this dataframe for mistakes.
 #' @param correspondence a character vector, containing symbol correspondences to IPA symbols in orthographical system of user's files
-#' @param ipa a character vector, containing symbol correspondences to IPA symbols in orthographical system of user's files
+#' @param ipa a character vector, containing IPA symbols
 #' @author George Moroz <agricolamz@gmail.com>
 #' @examples
-#' create_correspondence(c("p", "t", "k"), c("pʰ", "tʰ", "kʰ"))
+#' check_correspondence(c("лъ", "и", "пI"), c("ɬ", "i", "pʼ"))
 #' @export
 
-create_correspondence <- function(correspondence, ipa) {
+check_correspondence <- function(correspondence, ipa) {
   # check whether crayon package is installed
   crayon_installed <- "crayon" %in% rownames(installed.packages())
 
@@ -19,6 +19,9 @@ create_correspondence <- function(correspondence, ipa) {
   corresp_df <- data.frame(transcription = correspondence,
                                   ipa,
                                   stringsAsFactors = FALSE)
+
+  # remove duplicates -------------------------------------------------------
+  corresp_df <- unique(corresp_df)
 
   # check IPA provided by user ----------------------------------------------
   in_phoible <- ipa %in% phoible$segment
@@ -62,6 +65,25 @@ create_correspondence <- function(correspondence, ipa) {
     )
   }
 
+  # not IPA "'"
+  if (TRUE %in% grepl("'", not_in_phoible)) {
+    warning(
+      paste0(
+        "Probably, you use not apropriate ",
+        if (crayon_installed == TRUE) {
+          crayon::cyan(crayon::bold(
+            paste('sign "', "'", '" for the ejectives')))
+        } else{
+          paste('sign "', "'", '" for the ejectives')
+        },
+        " in your IPA transcription (check correspondences: ",
+        paste(grep("'", ipa), collapse = ", "),
+        ")."
+      ),
+      call. = FALSE
+    )
+  }
+
   # not in phoible
   if (length(not_in_phoible) > 0) {
     warning(
@@ -83,10 +105,9 @@ create_correspondence <- function(correspondence, ipa) {
   }
 
   # check transcription provided by user ------------------------------------
-  if(FALSE %in% (duplicated(corresp_df) == duplicated(correspondence))){
-    duplicated_cor <-
-      which((duplicated(corresp_df) == duplicated(correspondence)) %in% FALSE)
-    check <- which(correspondence == correspondence[duplicated_cor])
+  if(TRUE %in% duplicated(corresp_df$transcription)){
+    duplicated_cor <- which(duplicated(corresp_df$transcription) %in% TRUE)
+    check <- which(corresp_df$transcription == corresp_df$transcription[duplicated_cor])
     warning(
       paste0(
         "Probably, you provided ",
