@@ -25,3 +25,11 @@ lapply(seq_along(phoible3$segment),
 setwd("/home/agricolamz/work/packages/lingphonology/lingphonology/data")
 save(phoible, file="phoible.RData", compress='xz')
 rm(list = ls())
+
+
+# create phonological_report ----------------------------------------------
+setwd("lingphonology/inst/extdata/")
+phonological_report <- readLines("report.Rmd")
+setwd("/home/agricolamz/work/packages/lingphonology/lingphonology/data")
+save(phonological_report, file="phonological_report.RData", compress='xz')
+rm(list = ls())
