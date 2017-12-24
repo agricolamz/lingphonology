@@ -15,7 +15,7 @@ create_correspondence(correspondence, ipa)
 This function returns a dataframe with IPA id, IPA symbol and transcription. If user doesn't provide any data, the function returns a template that is used in lingphonology, so users can save it to the disc and open it with appropriate software.
 }
 \examples{
-create_correspondence(c("pʰ", "tʰ", "kʰ"), c("p", "t", "k"))
+create_correspondence(c("p", "t", "k"), c("pʰ", "tʰ", "kʰ"))
 }
 \author{
 George Moroz <agricolamz@gmail.com>

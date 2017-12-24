@@ -5,7 +5,7 @@
 #' @param ipa a character vector, containing symbol correspondences to IPA symbols in orthographical system of user's files
 #' @author George Moroz <agricolamz@gmail.com>
 #' @examples
-#' create_correspondence(c("pʰ", "tʰ", "kʰ"), c("p", "t", "k"))
+#' create_correspondence(c("p", "t", "k"), c("pʰ", "tʰ", "kʰ"))
 #' @export
 
 create_correspondence <- function(correspondence, ipa) {
@@ -16,7 +16,7 @@ create_correspondence <- function(correspondence, ipa) {
   correspondence <- as.character(correspondence)
 
   # create a dataframe with IPA (and/for user's values) ---------------------
-  correspondence_df <- data.frame(transcription = correspondence,
+  corresp_df <- data.frame(transcription = correspondence,
                                   ipa,
                                   stringsAsFactors = FALSE)
 
@@ -25,7 +25,7 @@ create_correspondence <- function(correspondence, ipa) {
   not_in_phoible <- ipa[!in_phoible]
 
   # not IPA "g"
-  if (FALSE %in% grepl("g", not_in_phoible)) {
+  if (TRUE %in% grepl("g", not_in_phoible)) {
     warning(
       paste0(
         "Probably, you use not apropriate ",
@@ -44,7 +44,7 @@ create_correspondence <- function(correspondence, ipa) {
   }
 
   # not IPA ":"
-  if (FALSE %in% grepl(":", not_in_phoible)) {
+  if (TRUE %in% grepl(":", not_in_phoible)) {
     warning(
       paste0(
         "Probably, you use not apropriate ",
@@ -63,9 +63,9 @@ create_correspondence <- function(correspondence, ipa) {
   }
 
   # check transcription provided by user ------------------------------------
-  if(FALSE %in% (duplicated(df) == duplicated(correspondence))){
+  if(FALSE %in% (duplicated(corresp_df) == duplicated(correspondence))){
     duplicated_cor <-
-      which((duplicated(df) == duplicated(correspondence)) %in% FALSE)
+      which((duplicated(corresp_df) == duplicated(correspondence)) %in% FALSE)
     check <- which(correspondence == correspondence[duplicated_cor])
     warning(
       paste0(
@@ -84,5 +84,5 @@ create_correspondence <- function(correspondence, ipa) {
     )
   }
 
-  return(correspondence_df)
+  return(corresp_df)
 }
