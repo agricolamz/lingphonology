@@ -5,3 +5,13 @@ author: "[George Moroz](mailto:agricolamz@gmail.com)"
 
 ## What is `lingphonology`?
 
+`lingphonology` is an R package for automatic generation of phonological report. User provide:
+
+* corpus or word list
+* transcription - IPA correspondence
+
+The package automaticly generates report containing:
+
+* information about all segments and its frequency
+* syllable structure description
+* list of non attested segments combinations and phonological generalisations of these restrictions
