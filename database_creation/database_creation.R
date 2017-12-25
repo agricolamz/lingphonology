@@ -26,10 +26,14 @@ setwd("/home/agricolamz/work/packages/lingphonology/lingphonology/data")
 save(phoible, file="phoible.RData", compress='xz')
 rm(list = ls())
 
-
 # create phonological_report ----------------------------------------------
-setwd("lingphonology/inst/extdata/")
 phonological_report <- readLines("report.Rmd")
 setwd("/home/agricolamz/work/packages/lingphonology/lingphonology/data")
 save(phonological_report, file="phonological_report.RData", compress='xz')
 rm(list = ls())
+
+# create zilo_dict --------------------------------------------------------
+setwd("/home/agricolamz/work/packages/lingphonology/lingphonology/database_creation")
+zilo_dict <- read_tsv("zilo_dict.csv")
+setwd("/home/agricolamz/work/packages/lingphonology/lingphonology/data")
+save(zilo_dict, file="zilo_dict.RData", compress='xz')
