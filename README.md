@@ -10,7 +10,7 @@ Get the stable version from CRAN:
 … or get the development version from GitHub:
 ```R
 install.packages("devtools")
-devtools::install_github("ropensci/lingphonology")
+devtools::install_github("agricolamz/lingphonology")
 ```
 
 Load a library:
