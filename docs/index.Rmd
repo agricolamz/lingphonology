@@ -1,0 +1,7 @@
+---
+title: "`lingtypology`: introduction and installation"
+author: "[George Moroz](mailto:agricolamz@gmail.com)"
+---
+
+## What is `lingphonology`?
+

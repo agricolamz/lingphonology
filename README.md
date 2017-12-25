@@ -18,6 +18,6 @@ Load a library:
 library(lingphonology)
 ```
 
-For a detailed tutorial see [GitHub pages](https://ropensci.github.io/lingtypology/).
+For a detailed tutorial see [GitHub pages](https://agricolamz.github.io/lingphonology/).
 
 You can contribute to `lingtypology`, but look through [contribution info](https://github.com/agricolamz/lingphonology/blob/master/CONTRIBUTING.md) before.
