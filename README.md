@@ -1,6 +1,6 @@
 # lingphonology
 
-`lingphonology` ...
+`lingphonology` is an R package for automatic phonological report generation.
 
 ## Installation
 
