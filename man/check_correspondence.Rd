@@ -7,9 +7,9 @@
 check_correspondence(correspondence, ipa)
 }
 \arguments{
-\item{correspondence}{a character vector, containing symbol correspondences to IPA symbols in orthographical system of user's files}
+\item{correspondence}{a character vector, containing symbol correspondences to IPA symbols in orthographical system of user's files.}
 
-\item{ipa}{a character vector, containing IPA symbols}
+\item{ipa}{a character vector, containing IPA symbols.}
 }
 \description{
 This function returns a dataframe with transcription and IPA symbols, simultaneously checking this dataframe for mistakes.

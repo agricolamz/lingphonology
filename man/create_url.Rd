@@ -7,7 +7,7 @@
 create_url(ipa)
 }
 \arguments{
-\item{ipa}{a character vector, containing IPA symbols}
+\item{ipa}{a character vector, containing IPA symbols.}
 }
 \description{
 This function creates a to PHOIBLE database using a vector of IPA symbols.

@@ -1,7 +1,7 @@
 #' Create a link to PHOIBLE database
 #'
 #' This function creates a to PHOIBLE database using a vector of IPA symbols.
-#' @param ipa a character vector, containing IPA symbols
+#' @param ipa a character vector, containing IPA symbols.
 #' @author George Moroz <agricolamz@gmail.com>
 #' @examples
 #' create_url(c("ɬ", "i", "pʼ"))

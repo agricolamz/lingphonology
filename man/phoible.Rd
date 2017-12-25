@@ -6,46 +6,46 @@
 \title{PHOIBLE's IPA symbols and features}
 \format{A data frame with 2207 rows and 40 variables:
 \describe{
-  \item{segment}{all segments from PHOIBLE in IPA representation}
-  \item{equivalence_class}{generalisation about segment type}
-  \item{tone}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{stress}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{syllabic}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{short}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{long}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{consonantal}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{sonorant}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{continuant}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{delayedRelease}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{approximant}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{tap}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{trill}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{nasal}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{lateral}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{labial}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{round}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{labiodental}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{coronal}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{anterior}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{distributed}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{strident}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{dorsal}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{high}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{low}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{front}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{back}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{tense}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{retractedTongueRoot}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{advancedTongueRoot}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{periodicGlottalSource}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{epilaryngealSource}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{spreadGlottis}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{constrictedGlottis}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{fortis}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{raisedLarynxEjective}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{loweredLarynxImplosive}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{click}{the PHOIBLE's characteristic of the segment with SPE destinctive features}
-  \item{url}{url to the PHOIBLE page for the segment}
+  \item{segment}{all segments from PHOIBLE in IPA representation.}
+  \item{equivalence_class}{generalisation about segment type.}
+  \item{tone}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{stress}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{syllabic}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{short}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{long}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{consonantal}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{sonorant}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{continuant}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{delayedRelease}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{approximant}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{tap}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{trill}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{nasal}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{lateral}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{labial}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{round}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{labiodental}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{coronal}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{anterior}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{distributed}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{strident}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{dorsal}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{high}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{low}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{front}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{back}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{tense}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{retractedTongueRoot}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{advancedTongueRoot}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{periodicGlottalSource}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{epilaryngealSource}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{spreadGlottis}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{constrictedGlottis}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{fortis}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{raisedLarynxEjective}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{loweredLarynxImplosive}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{click}{the PHOIBLE's characteristic of the segment with SPE destinctive features.}
+  \item{url}{url to the PHOIBLE page for the segment.}
 }}
 \usage{
 phoible

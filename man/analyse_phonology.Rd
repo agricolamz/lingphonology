@@ -4,20 +4,22 @@
 \alias{analyse_phonology}
 \title{Analyse data and create a report}
 \usage{
-analyse_phonology(correspondences, corpus, path)
+analyse_phonology(correspondences, corpus, path = NULL, format = "html")
 }
 \arguments{
-\item{correspondences}{a checked dataframe with transcription-IPA correspondences}
+\item{correspondences}{a checked dataframe with transcription-IPA correspondences.}
 
-\item{corpus}{variable containing corpus}
+\item{corpus}{variable containing corpus.}
 
-\item{path}{path, where function will create a report}
+\item{path}{path, where function will create a report. By default report is created in working directory.}
+
+\item{format}{a string that define the output format: "word" or "html" (by default).}
 }
 \description{
 This function takes checked transcription-IPA correspondences and checked corpus or word list and generates a phonological report.
 }
 \examples{
-# analyse_phonology(correspondences, corpus, path)
+analyse_phonology()
 }
 \author{
 George Moroz <agricolamz@gmail.com>

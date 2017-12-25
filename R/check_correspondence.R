@@ -1,8 +1,8 @@
 #' Check IPA-transcription correspondence
 #'
 #' This function returns a dataframe with transcription and IPA symbols, simultaneously checking this dataframe for mistakes.
-#' @param correspondence a character vector, containing symbol correspondences to IPA symbols in orthographical system of user's files
-#' @param ipa a character vector, containing IPA symbols
+#' @param correspondence a character vector, containing symbol correspondences to IPA symbols in orthographical system of user's files.
+#' @param ipa a character vector, containing IPA symbols.
 #' @author George Moroz <agricolamz@gmail.com>
 #' @examples
 #' check_correspondence(c("лъ", "и", "пI"), c("ɬ", "i", "pʼ"))
