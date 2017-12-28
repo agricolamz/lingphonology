@@ -5,10 +5,10 @@
 #' @param ipa a character vector, containing IPA symbols.
 #' @author George Moroz <agricolamz@gmail.com>
 #' @examples
-#' check_correspondence(c("лъ", "и", "пI"), c("ɬ", "i", "pʼ"))
+#' check_converter(c("лъ", "и", "пI"), c("ɬ", "i", "pʼ"))
 #' @export
 
-check_correspondence <- function(correspondence, ipa) {
+check_converter <- function(correspondence, ipa) {
   # check whether crayon package is installed
   crayon_installed <- "crayon" %in% rownames(installed.packages())
 
