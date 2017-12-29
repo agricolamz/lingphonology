@@ -10,7 +10,7 @@
 #' analyse_phonology()
 #' @export
 
-analyse_phonology <- function(correspondences,
+make_report <- function(correspondences,
                               corpus,
                               path = NULL,
                               format = "html") {

@@ -48,8 +48,8 @@ make_conversion <- function(x, converter) {
   })
 
   # remove some spaces ------------------------------------------------------
-  x <- gsub(" # ", "#", x)
   x <- gsub(" +", " ", x)
+  x <- gsub("^ | $", "", x)
 
   # create final dataframe --------------------------------------------------
   return(

@@ -12,7 +12,7 @@ apply_converter(x, converter)
 \item{ipa}{a character vector, containing IPA symbols.}
 }
 \description{
-This function returns a voctro with transcription and IPA symbols, simultaneously checking this dataframe for mistakes.
+This function returns a vector with transcription and IPA symbols, simultaneously checking this dataframe for mistakes.
 }
 \examples{
 apply_converter(zilo_dict$zilo_cyrillic, zilo_correspondences)

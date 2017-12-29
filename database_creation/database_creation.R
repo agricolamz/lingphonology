@@ -39,17 +39,17 @@ setwd("/home/agricolamz/work/packages/lingphonology/lingphonology/data")
 save(zilo_dict, file="zilo_dict.RData", compress='xz')
 
 # create zilo_correspondenses ---------------------------------------------
-zilo_correspondences <- read_delim("https://raw.githubusercontent.com/agricolamz/andi_cyrillic_to_IPA/master/andi%20cyrillic%20to%20IPA.map", skip = 16, delim = " ", col_names = FALSE)
-zilo_correspondences <- zilo_correspondences[-c(1:2, 46, 237:238, 686:716), -2]
-colnames(zilo_correspondences) <- c("transcription", "ipa")
+zilo_converter <- read_delim("https://raw.githubusercontent.com/agricolamz/andi_cyrillic_to_IPA/master/andi%20cyrillic%20to%20IPA.map", skip = 16, delim = " ", col_names = FALSE)
+zilo_converter <- zilo_converter[-c(1:2, 46, 237:238, 686:716), -2]
+colnames(zilo_converter) <- c("transcription", "ipa")
 
-zilo_correspondences %>%
+zilo_converter %>%
   mutate(transcription = tolower(transcription),
          transcription = gsub("i|і|Ӏ|I|ӏ", "1", transcription),
          ipa = gsub("'", "ʼ", ipa)) %>%
   mutate(transcription = gsub("1", "I", transcription)) %>%
   distinct() ->
-  zilo_correspondences
+  zilo_converter
 
 setwd("/home/agricolamz/work/packages/lingphonology/lingphonology/data")
-save(zilo_correspondences, file="zilo_correspondences.RData", compress='xz')
+save(zilo_converter, file="zilo_correspondences.RData", compress='xz')
